@@ -1,0 +1,57 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{bhandari-2022}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a8abfbaa93b3dc6a025c0a1e42eb8fba}{%
+           family={Bhandari},
+           familyi={B\bibinitperiod},
+           given={Pritha},
+           giveni={P\bibinitperiod\bibinitdelim .\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8abfbaa93b3dc6a025c0a1e42eb8fba}
+      \strng{fullhash}{a8abfbaa93b3dc6a025c0a1e42eb8fba}
+      \strng{fullhashraw}{a8abfbaa93b3dc6a025c0a1e42eb8fba}
+      \strng{bibnamehash}{a8abfbaa93b3dc6a025c0a1e42eb8fba}
+      \strng{authorbibnamehash}{a8abfbaa93b3dc6a025c0a1e42eb8fba}
+      \strng{authornamehash}{a8abfbaa93b3dc6a025c0a1e42eb8fba}
+      \strng{authorfullhash}{a8abfbaa93b3dc6a025c0a1e42eb8fba}
+      \strng{authorfullhashraw}{a8abfbaa93b3dc6a025c0a1e42eb8fba}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{month}{7}
+      \field{title}{How to write a lab report}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.scribbr.com/academic-writing/lab-report/
+      \endverb
+      \verb{url}
+      \verb https://www.scribbr.com/academic-writing/lab-report/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
