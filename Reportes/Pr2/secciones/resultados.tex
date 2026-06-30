@@ -1,0 +1,51 @@
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\columnwidth]{figuras/bulbo_datos.jpg}
+    \caption{Corriente sobre el ánodo al variar su voltaje desde $0-20V$ y $20-40$ en pasos de $0.5V$ y en pasos de $1V$, respectivamente.}
+    \label{bulbolimpio}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\columnwidth]{figuras/bulbo_ajuste.jpg}
+    \caption{Ajuste lineal en el origen de los datos de la Figura \ref{bulbolimpio}.}
+    \label{bulboajuste}
+\end{figure}
+
+Para el ajuste en el origen de la forma $I=mx$ donde $I$ sera la corriente, $x = V^{3/2}$ se obtiene 
+
+\begin{table}[h]
+    \centering
+     \begin{tabular}{ccc}
+        $m=$ & $1.119290\times 10^{-5} \pm 1\times 10^{-7}$ & $A/V^\frac{3}{2}$\\
+        $R^2=$ & $0.995$ &\\
+        $e/m_e=$ & $1.719\times 10^{11} \pm 3.2\times 10^9 $ & $C/kg$\\
+        $E_{\%}$ & $-2.23\%$ &
+     \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\columnwidth]{figuras/bulbo_sobre_ajuste.png}
+    \caption{Ajuste en potencia de los datos de la Figura \ref{bulbolimpio}.}
+    \label{bulboajuste_limpio}
+\end{figure}
+
+Para el ajuste linealizado $\ln I = p \ln V + \ln m$ se obtiene 
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{ccc}
+        $p=$ & $1.243 \pm 0.013$ &\\
+        $m=$ & $2.57\times 10^{-5} \pm  0.09\times 10^{-5}$ & $A/V^p$\\
+        $R^2=$ & $0.993$ &\\
+        $E_{\%}=$ & $-17.1\%$ &
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\columnwidth]{figuras/tresmedios.jpg}
+    \caption{Ajuste linealizado de los datos de la Figura \ref{bulbolimpio}.}
+    \label{bulbolineal}
+\end{figure}
