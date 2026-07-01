@@ -1,35 +1,47 @@
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\columnwidth]{figuras/pd_limpio.jpg}
-    \caption{Corriente sobre diodo en polarizacion directa, variando el voltaje de $0 V$ a $15V$ en pasos de $0.5 V$, a una temperatura de $24 C^o$.}
-    \label{pdlimpio}
-\end{figure}
 
+Con los valores medidos se construyó la gráfica de la corriente del diodo \(I_d\) como función del voltaje \(V_d\), incluyendo los datos de polarización directa e inversa. Para estimar la relación \(e/k_B\), se utilizaron únicamente los datos de polarización directa en el intervalo donde la corriente crece exponencialmente con el voltaje.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\columnwidth]{figuras/pi_limpio.jpg}
-    \caption{Corriente sobre diodo en polarizacion inversa, variando el voltaje de $0 V$ a $15V$ en pasos de $0.5 V$, a una temperatura de $24 C^o$.}
-    \label{pilimpio}
-\end{figure}
+A partir de esos datos se calculó \(\ln I_d\) y se realizó un ajuste lineal de la forma
+\begin{equation}
+    \ln I_d = m V_d + b
+    \label{ajustependiente}
+\end{equation}
+donde \(m\) corresponde a la pendiente del ajuste y \(b\) a la ordenada al origen. Usando la temperatura absoluta registrada durante el experimento, se obtuvo la estimación experimental de la relación \(e/k_B\) mediante
+\begin{equation}
+    \frac{e}{k_B} = m n T
+\end{equation}
+El valor $n$ se eligió de acuerdo con el régimen de operación del diodo, que en este caso se consideró recombinación dominante, \(n \approx 2\).\\
 
-Para el ajuste lineal \textbf{insertar referencia} de la forma $y=mx+b$ donde $m=\beta /nT$ y $\beta = e/k_B$, con valores para este experimento $n=2$, $T=297.15 K$; se obtuvieron los siguientes resultados
+Para el ajuste lineal \ref{ajustependiente} con $T=297.15 K$; se obtuvieron los siguientes resultados
 
-\begin{table}
+\begin{table}[h]
     \centering
     \begin{tabular}{ccc}
         $m=$ & $21.1 \pm 0.1 $ & $1/V$\\
         $b=$ & -$19.37 \pm 0.07$ &\\
         $R^2=$ & $0.998$ &\\
         $e/k_B =$ & $1.2528\times 10^4 \pm 64$ & $K/V$\\
-        $E_{\%} =$ & $(7.96 \pm 0.55)\%$ &
+        $E_{\%} =$ & $7.96 \%$ &
     \end{tabular}
 \end{table}
 
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\columnwidth]{figuras/pd_ajuste.jpg}
-    \caption{Ajuste de la linealizacion \textbf{insertar referencia} para los datos obtenidos de la Figura \ref{pdlimpio}.}
+\begin{center}
+    \includegraphics[width=0.92\columnwidth]{figuras/pd_limpio.jpg}
+    \label{pdlimpio}
+    \captionof{figure}{Corriente sobre diodo en polarización directa, variando el voltaje de $0V$ a $15V$ en pasos de $0.5V$, a una temperatura de $24^\circ C$.}
+\end{center}
+
+\begin{center}
+    \includegraphics[width=0.92\columnwidth]{figuras/pi_limpio.jpg}
+    \label{pilimpio}
+    \captionof{figure}{Corriente sobre diodo en polarizacion inversa, variando el voltaje de $0 V$ a $15V$ en pasos de $0.5 V$, a una temperatura de $24^\circ C$.}
+\end{center}
+
+\begin{center}
+    \includegraphics[width=0.92\columnwidth]{figuras/pd_ajuste.jpg}
     \label{pdajuste}
-\end{figure}
+    \captionof{figure}{Ajuste de la linealizacion \ref{ajustependiente} para los datos obtenidos de la Figura \ref{pdlimpio}.}
+\end{center}
+
+
