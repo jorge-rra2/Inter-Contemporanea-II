@@ -35,6 +35,10 @@
 \RequirePackage[hang, labelfont=bf, labelsep=period, margin=0.5in]{caption}
 \RequirePackage{subcaption}
 
+%pa arreglar el desmadre de las figuras
+\RequirePackage{placeins}
+\RequirePackage{caption}
+
 % Bibliografía
 \RequirePackage[backend=biber]{biblatex}
 \RequirePackage[style=mexican]{csquotes}
@@ -183,10 +187,6 @@
     		
     		Facultad de Ciencias\\
     		Universidad Nacional Autónoma de México
-    		
-    		\medskip
-    		
-    		\textit{Fecha de entrega: \@date\\[1ex]}
     
         \end{center}
     
