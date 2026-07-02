@@ -1,0 +1,81 @@
+\documentclass{replab}
+\usepackage{lipsum}
+
+%Datos a moficar:
+%	Numero de Practica
+%	Titulo
+%	Fecha (si es necesario)
+%	Apendices (si es necesario)
+%	bibliografia (si es necesario)
+
+
+% --- Información del documento ---
+\title{Práctica 3}
+\author{Jorge y Jordi}
+
+\date{}
+\subtitle={Medición de la relacion entre la constante de Planck y la carga del electron, $h/e$}
+\email={}
+\subject={Laboratorio de Física}
+
+\setlength{\columnsep}{14pt}
+
+% --- Archivo de bibliografía ---
+
+\addbibresource{repbib.bib}
+
+% --- Inicio del documento ---
+\begin{document}
+	
+	\pagestyle{fancy}
+	\unspacedoperators
+	
+% --- Título ---
+	\twocolumn[
+		\begin{center}
+			\maketitle
+			
+			{\begin{tcolorbox}[colframe=white, colback=principaldos, arc=8pt]
+				\begin{onecolabstract}
+					\input{secciones/resumen}
+
+					\medskip
+
+					\noindent\textit{Palabras clave:} %Palabras clave
+				\end{onecolabstract}
+			\end{tcolorbox}}
+
+			\smallskip
+		\end{center}
+	]
+
+	\saythanks
+
+	\selectlanguage{spanish}
+	
+% --- Cuerpo del reporte ---
+	
+	\section{Introducción}
+		\input{secciones/introduccion}
+	%Aqui va la introduccion
+
+	\section{Metodología}
+		\input{secciones/metodologia}
+
+	\section{Resultados}
+		\input{secciones/resultados}
+	
+
+	\section{Discusión y Conclusión}
+		\input{secciones/discusion.tex}
+
+
+	\appendix
+
+	\section{Primer apéndice}
+
+	%Apendice por si acaso
+	
+	\printbibliography[heading=bibintoc]
+	
+\end{document}

@@ -1,0 +1,49 @@
+
+
+La práctica tuvo como objetivo determinar experimentalmente la relación entre la constante de Planck y la carga elemental, $h/e$, a partir del efecto fotoeléctrico observado en diodos emisores de luz, LED, de distintas longitudes de onda. Para ello se midió el voltaje ánodo-cátodo, $V_{A-K}$, asociado al encendido de cada LED cuando la corriente que circulaba por él alcanzaba un valor de umbral del orden de algunos microamperes.
+
+\subsection{Materiales}
+
+El montaje experimental consistió en una fuente de alimentación regulada de corriente directa, variable entre $0$ y $10\,\mathrm{V}$, un conjunto de ocho LEDs de diferentes longitudes de onda, una resistencia de $8.2\,\mathrm{k\Omega}$ conectada en serie con cada LED, dos multímetros digitales, cables tipo caimán y una tablilla de conexiones. Uno de los multímetros se utilizó como microamperímetro para medir la corriente $I_{A-K}$ que circulaba por el LED, mientras que el segundo se empleó como voltímetro para medir la diferencia de potencial ánodo-cátodo, $V_{A-K}$.
+
+\subsection{Diseño experimental}
+
+El circuito empleado consistió en una fuente de voltaje de corriente directa conectada en serie con una resistencia limitadora de corriente, un microamperímetro y el LED bajo estudio. El voltímetro se conectó en paralelo con el LED, de forma que permitiera medir directamente la diferencia de potencial entre el ánodo y el cátodo. La resistencia de $8.2\,\mathrm{k\Omega}$ se utilizó para limitar la corriente en el circuito y evitar daños en los LEDs durante el incremento gradual del voltaje aplicado.
+
+Cada LED emitía luz con una longitud de onda característica $\lambda$. A partir de dicha longitud de onda se calculó la frecuencia correspondiente mediante
+
+\begin{equation}
+    \nu = \frac{c}{\lambda}
+\end{equation}
+
+donde $c$ es la velocidad de la luz en el vacío. Bajo la aproximación de que la energía eléctrica entregada a los portadores de carga se transforma en energía luminosa emitida por el LED, se consideró la relación
+
+\begin{equation}
+    eV_{A-K} = h\nu
+\end{equation}
+
+De esta expresión se obtiene
+
+\begin{equation}
+    \nu = \frac{e}{h} V_{A-K}
+\end{equation}
+
+por lo que la pendiente de la gráfica de $\nu$ en función de $V_{A-K}$ corresponde a $e/h$. En consecuencia, el inverso de dicha pendiente proporciona una estimación experimental de la razón $h/e$.
+
+\subsection{Procedimiento experimental}
+
+Antes de iniciar las mediciones se verificó que la fuente de alimentación estuviera ajustada a $0\,\mathrm{V}$. Posteriormente, se conectó la terminal de tierra del equipo a la fuente de alimentación y se armó el circuito correspondiente al primer LED. La salida positiva de la fuente se conectó al microamperímetro, de manera que este permitiera registrar la corriente $I_{A-K}$ que circulaba por el LED. La terminal común del microamperímetro se conectó al LED, mientras que el voltímetro se colocó en paralelo con este para medir el voltaje $V_{A-K}$.
+
+Una vez revisadas las conexiones, se aumentó lentamente el voltaje suministrado por la fuente. Durante este proceso se observó la corriente indicada por el microamperímetro hasta que esta alcanzó un valor dentro del intervalo de $5$ a $15\,\mu\mathrm{A}$. Al llegar a dicho intervalo, se registraron simultáneamente la corriente $I_{A-K}$ y el voltaje ánodo-cátodo $V_{A-K}$. Este procedimiento se repitió para cada uno de los ocho LEDs disponibles, procurando mantener el mismo criterio de corriente de umbral para todas las mediciones.
+
+Para cada LED se asoció el voltaje medido $V_{A-K}$ con la frecuencia $\nu$ calculada a partir de su longitud de onda nominal. Con el conjunto de datos obtenidos se construyó una gráfica de $\nu$ en función de $V_{A-K}$ y se realizó un ajuste lineal de la forma
+
+\begin{equation}
+    \nu = m V_{A-K} + b
+\end{equation}
+
+donde $m$ es la pendiente de la recta y $b$ la ordenada al origen. Idealmente, de acuerdo con el modelo empleado, se espera que $b$ sea pequeño en comparación con el término lineal dominante. Finalmente, a partir de la pendiente experimental se calculó la relación
+
+\begin{equation}
+    \frac{h}{e} = \frac{1}{m}
+\end{equation}
