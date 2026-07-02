@@ -1,0 +1,73 @@
+La determinación de la relación carga-masa del electrón, $e/m_e$, es uno de los experimentos clásicos de la física moderna, pues permite caracterizar una propiedad fundamental de una partícula cargada sin medir por separado su carga y su masa. Aunque el método tradicional suele basarse en la desviación de electrones mediante campos eléctricos y magnéticos, también es posible obtener esta razón a partir de la emisión termoiónica en tubos de vacío. En este experimento se utilizó un diodo de vacío tipo 1V2 y se estudió la corriente de ánodo producida al variar el voltaje entre el cátodo y el ánodo.
+
+La emisión termoiónica ocurre cuando un sólido conductor se calienta hasta que algunos electrones adquieren energía suficiente para abandonar la superficie del metal. En un diodo de vacío, el filamento calentado actúa como cátodo emisor, mientras que el ánodo colecta los electrones emitidos cuando se encuentra a un potencial positivo respecto al cátodo. Si la emisión es suficientemente intensa, la corriente no queda determinada únicamente por la temperatura del filamento, sino por la nube de carga negativa acumulada cerca del cátodo. A este régimen se le conoce como régimen limitado por carga espacial.
+
+El fundamento teórico del experimento es la ley de Child--Langmuir para electrodos cilíndricos concéntricos. Para un diodo de vacío con cátodo de radio $r_c$, ánodo de radio $r_a$ y longitud efectiva del cátodo $L$, la corriente de ánodo en el régimen limitado por carga espacial está dada por \cite{angiolillo2009thermionic}
+
+\begin{equation}
+I_a =
+\frac{8\pi\varepsilon_0}{9}
+\sqrt{\frac{2e}{m_e}}
+\frac{L}{r_a\beta^2}
+V_a^{3/2}
+\label{eq:child_langmuir}
+\end{equation}
+
+donde $I_a$ es la corriente de ánodo, $V_a$ es el voltaje entre ánodo y cátodo, $\varepsilon_0$ es la permitividad del vacío y $\beta$ es el factor de corrección de Langmuir para radios finitos. Este factor depende de la geometría del tubo y se expresa en términos de
+
+\begin{equation}
+\alpha = \ln\left(\frac{r_a}{r_c}\right)
+\end{equation}
+
+mediante una expansión de la forma
+
+\begin{equation}
+\beta =
+\alpha
+-\frac{2}{5}\alpha^2
++\frac{11}{120}\alpha^3
+-\frac{47}{3300}\alpha^4
++\cdots
+\end{equation}
+
+La ecuación \eqref{eq:child_langmuir} predice que la corriente debe escalar como $I_a\propto V_a^{3/2}$. Por tanto, si se ajustan los datos experimentales a la forma
+
+\begin{equation}
+I_a = C V_a^{3/2}
+\label{eq:ajuste}
+\end{equation}
+
+la pendiente $C$ permite despejar la relación carga-masa del electrón como
+
+\begin{equation}
+\frac{e}{m_e}
+=
+\frac{1}{2}
+\left(
+\frac{9r_a\beta^2 C}{8\pi\varepsilon_0 L}
+\right)^2
+\label{eq:em_despejado}
+\end{equation}
+
+En este trabajo se usaron los parámetros geométricos reportados para el bulbo 1V2 en la Tabla I de Angiolillo \cite{angiolillo2009thermionic}. Estos valores se muestran en la Tabla \ref{tab:parametros_1v2}; para los cálculos se convirtieron las longitudes al Sistema Internacional.
+
+\begin{table}[htbp]
+\centering
+\caption{Parámetros geométricos del bulbo 1V2 tomados de la Tabla I de \cite{angiolillo2009thermionic}.}
+\label{tab:parametros_1v2}
+
+\scriptsize
+\begin{tabular}{lcc}
+\hline
+Parámetro & Valor reportado & Valor en SI \\
+\hline
+Radio del cátodo $r_c$ & \SI{0.0318}{cm} & \SI{3.18e-4}{m} \\
+Radio del ánodo $r_a$ & \SI{0.592}{cm} & \SI{5.92e-3}{m} \\
+Longitud efectiva $L$ & \SI{0.534}{cm} & \SI{5.34e-3}{m} \\
+$r_a/r_c$ & $18.64$ & $18.64$ \\
+Factor de Langmuir $\beta$ & $1.081$ & $1.081$ \\
+\hline
+\end{tabular}
+\end{table}
+
+El objetivo de la práctica fue medir la relación $e/m_e$ del electrón a partir de la curva característica $I_a$ contra $V_a$ de un diodo termoiónico 1V2, verificando la dependencia predicha por la ley de Child--Langmuir y usando la pendiente del ajuste para estimar experimentalmente dicha razón.

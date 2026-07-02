@@ -15,6 +15,9 @@
 \RequirePackage{amssymb, amsthm, siunitx}% Funciones matemáticas adicionales y unidades del SI
 \RequirePackage[nolimits]{cmupint}% Integrales rectas
 
+%Nose pa que sirve pero no jala si no esta
+ \sisetup{per-mode=symbol}
+
 % Configuración de fuente
 \RequirePackage{lmodern}
 \RequirePackage[T1]{fontenc}
