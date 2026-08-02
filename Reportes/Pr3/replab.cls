@@ -220,7 +220,7 @@ Cuernavaca, Morelos, México
 			colspec = {Q[c,m] Q[l,m]},
 			colsep = 2pt
 		}
-    		 {\small{Instituo de Ciencias Fisicas}}
+    		 {\small{Instituto de Ciencias Fisicas}}
     	\end{tblr}
     }
     \fancyhead[re]{%
