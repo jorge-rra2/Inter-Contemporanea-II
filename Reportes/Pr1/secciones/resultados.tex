@@ -1,5 +1,5 @@
 
-Con los valores medidos se construyó la gráfica de la corriente del diodo \(I_d\) como función del voltaje \(V_d\), incluyendo los datos de polarización directa e inversa. Para estimar la relación \(e/k_B\), se utilizaron únicamente los datos de polarización directa en el intervalo donde la corriente crece exponencialmente con el voltaje.
+Con los valores medidos se construyó la gráfica de la corriente del diodo \(I_d\) como función del voltaje \(V_d\) en polarizacion directa (Figura \ref{pdlimpio1}) y polarizacion inversa (Figura \ref{pilimpio}). Para estimar la relación \(e/k_B\), se utilizaron únicamente los datos de polarización directa en el intervalo donde la corriente crece exponencialmente con el voltaje.
 
 A partir de esos datos se calculó \(\ln I_d\) y se realizó un ajuste lineal de la forma
 \begin{equation}
@@ -12,7 +12,7 @@ donde \(m\) corresponde a la pendiente del ajuste y \(b\) a la ordenada al orige
 \end{equation}
 El valor $n$ se eligió de acuerdo con el régimen de operación del diodo, que en este caso se consideró recombinación dominante, \(n \approx 2\).\\
 
-Para el ajuste lineal \ref{ajustependiente} con $T=297.15 K$; se obtuvieron los siguientes resultados
+Para la ecuacion \ref{ajustependiente} con $T=297.15 K$; se obtuvo el ajuste lineal de la Figura \ref{pdajuste} con el que se calcularon los datos de la tabla \ref{tabla_gg}
 
 \begin{table}[h]
 \centering
@@ -28,25 +28,27 @@ Magnitud & Valor \\
 \(E\%\) & \(7.96\%\) \\
 \hline
 \end{tabular}
+\label{tabla_gg}
 \end{table}
 
-
-\begin{center}
-    \includegraphics[width=0.92\columnwidth]{figuras/pd_limpio.jpg}
-    \label{pdlimpio}
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figuras/pd_limpio.jpg}
     \captionof{figure}{Corriente sobre diodo en polarización directa, variando el voltaje de $0V$ a $15V$ en pasos de $0.5V$, a una temperatura de $24^\circ C$.}
-\end{center}
+    \label{pdlimpio1}
+\end{figure*}
 
-\begin{center}
-    \includegraphics[width=0.92\columnwidth]{figuras/pi_limpio.jpg}
-    \label{pilimpio}
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figuras/pi_limpio.jpg}
     \captionof{figure}{Corriente sobre diodo en polarizacion inversa, variando el voltaje de $0 V$ a $15V$ en pasos de $0.5 V$, a una temperatura de $24^\circ C$.}
-\end{center}
+    \label{pilimpio}
+\end{figure*}
 
-\begin{center}
-    \includegraphics[width=0.92\columnwidth]{figuras/pd_ajuste.jpg}
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figuras/grafica_lineal_shock.png}
+    \captionof{figure}{Ajuste de la linealizacion \ref{ajustependiente} para los datos obtenidos en la Figura \ref{pdlimpio1}.}
     \label{pdajuste}
-    \captionof{figure}{Ajuste de la linealizacion \ref{ajustependiente} para los datos obtenidos de la Figura \ref{pdlimpio}.}
-\end{center}
-
+\end{figure*}
 

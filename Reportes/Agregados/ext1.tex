@@ -1,0 +1,292 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%   INICIO DEL PREÁMBULO 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper, onecolumn, 12pt]{article} %{book}
+ 
+% Soporte para acentos. En Windows se puede usar latin1 o utf8, se recomienda utf8 :
+\usepackage[utf8]{inputenc}
+
+% Español, división de sílabas
+%latex tiene un mecanismo para separar las sílabas :
+\usepackage[spanish,mexico]{babel}
+\usepackage{url}
+
+% Usar codificación T1
+% para que dibuje lo mejor posible las tildes de los acentos :
+\usepackage[T1]{fontenc}
+
+% Algunos paquetes que necesitaremos más adelante
+% multicol se emplea para tablas (darles formato) y hacer parrafos multicolumnas
+\usepackage{multicol}
+
+% Indentación en la primera linea de los parrafos
+%\parindent=0mm
+
+%Liga el indice con el contenido :
+%\usepackage{hyperref} 
+
+%---------------------------------------------------------------------
+%Matemáticas
+% Soporte de símbolos adicionales (matemáticas) :
+\usepackage{amsmath}		
+
+% También se incluyen algunos entornos adicionales para matemáticas :
+\usepackage{amssymb}		
+
+%Acceso a una amplia variedad de fuentes matemáticas adicionales, incluidos símbolos y alfabetos especiales :
+\usepackage{amsfonts}
+%-------------------------------------------------------------------
+%Imagenes, imagenesTipos
+
+%Para inserción de imagenes, compilando con pdflatex :
+\usepackage[pdftex]{graphicx}
+
+%\usepackage{showframe} %muestra TODOS los margenes  
+
+%---------------------------------------------------------------------
+%Tablas
+% Tablas grandes :
+%\usepackage{longtable} 
+
+% Inclusión de celdas de varios renglones en tablas:
+%\usepackage{multirow} 
+
+% Algunos comandos y ambientes para tablas
+\usepackage{tabularx}
+%---------------------------------------------------------------------
+%Paquete útiles:
+
+%\usepackage{verbatim} %Para usar : \begin{comment}
+
+%Se usa para hacer listas numeradas :
+\usepackage{enumerate}
+%---------------------------------------------------------------------
+%Definición de nuevo comando: \celda
+\newcommand{\celda}[1]{
+	\begin{minipage}{2.5cm}
+		\vspace{5mm}
+		#1
+		\vspace{5mm}
+	\end{minipage}
+}
+
+%Definición del color azul:
+\usepackage{xcolor}
+\definecolor{azul}{rgb}{0.0, 0.53, 0.74}
+
+%Re-definición de los márgenes:
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+%---------------------------------------------------------------
+%Para uso de [H]
+\usepackage{float}
+%El [H] le dice a LaTeX que coloque la figura exactamente aquí, ignorando las reglas de posicionamiento automático de figuras.
+%----------------------------------------------------------------
+%Esto aparece con \maketitle en el documento :
+
+\title{ \bf{Espectro de absorción de la clorofila}}
+
+\author{Balderas Suárez Benjamín Isaías\\
+		Mendoza López Luis Alberto}
+
+\date{\today{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%   FIN DEL PREÁMBULO 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%   INICIO DEL DOCUMENTO 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+    \begin{figure}[h]
+		\raggedright
+		\includegraphics[scale=0.07]{Logo_UNAM.png} \hfill \includegraphics[scale=0.07]{Logo_FC.png}
+    \end{figure}
+
+    \vspace{2.5mm}   %Espacio vertical
+
+    \begin{center}
+		{\Large \textbf{Medición del cociente carga del electrón constante de Boltzman $e/K_b$}}\\
+		\vspace{2mm}
+		{\large Jorge Silva Moreno. \quad  Lozada Rivera Jordi Rodrigo.}\\
+		\vspace{4mm}
+	\end{center}
+
+    \begin{center}
+		\textcolor{azul}{\rule{150mm}{0.5mm}}
+	\end{center}	
+    
+    \begin{abstract}
+		
+	\end{abstract}
+
+    \begin{center}
+		\textcolor{azul}{\rule{150mm}{0.5mm}}
+	\end{center}	
+
+    \vspace{5mm}
+\end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% Documento en 2 COLUMNAS %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multicols}{2}%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+\raggedcolumns   %  Desactiva la alineación automática de las columnas y permite que el contenido fluya de manera más libr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introducción}
+\noindent La medición del cociente $e/k_B$ mediante la característica corriente-voltaje de un diodo semiconductor permite determinar experimentalmente la relación entre la carga elemental del electrón y la constante de Boltzmann, dos constantes fundamentales que intervienen en la descripción de los procesos eléctricos y térmicos. Este experimento confirma el modelo teórico del comportamiento de los semiconductores y demuestra cómo fenómenos microscópicos pueden emplearse para obtener parámetros fundamentales de la naturaleza. Asimismo, permite desarrollar habilidades en el análisis de datos experimentales, el tratamiento de incertidumbres y la comparación entre resultados experimentales y valores teóricos.
+\section{Metodología}
+
+\noindent El experimento tuvo como objetivo obtener la curva característica de un diodo semiconductor y, a partir de las mediciones de corriente y voltaje en polarización directa, estimar la relación entre la carga del electrón y la constante de Boltzmann, \(e/k_B\). Para ello se midió la corriente \(I_d\) que circulaba por el diodo y la diferencia de potencial \(V_d\) entre sus terminales al variar el voltaje de entrada \(V_i\). Las mediciones se realizaron tanto en polarización directa como en polarización inversa.
+
+\subsection{Materiales}
+
+\noindent Para el montaje experimental se utilizó una consola LEB01, un módulo M05, dos multímetros digitales, un termómetro, tres cables BNC plug-plug, seis cables banana de \(4\,\mathrm{mm}\) y un conector BNC tipo T jack-plug-jack. El módulo M05 contenía el circuito de polarización del diodo, el cual se muestra en la Figura \ref{dag_circuito}. Uno de los multímetros se empleó para medir el voltaje en el diodo, mientras que el otro se utilizó para medir la corriente que circulaba a través de él.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{circuito.png}
+    \caption{Circuito de polarizacion del diodo}
+    \label{dag_circuito}
+\end{figure}
+
+\subsection{Diseño experimental}
+
+\noindent El módulo M05 se conectó a uno de los puertos disponibles de la consola LEB01. La fuente de voltaje variable positiva de la consola se conectó a la entrada correspondiente del módulo, cuidando la polaridad de las terminales. El circuito permitió seleccionar la polarización directa o inversa del diodo mediante el interruptor del módulo.\\
+
+\noindent La diferencia de potencial en el diodo, \(V_d\), se midió conectando un multímetro en modo voltímetro de corriente directa entre las terminales correspondientes a los puntos \(a\) y \(b\) de la consola. La corriente del diodo, \(I_d\), se midió conectando el segundo multímetro en serie con el módulo M05, usando las terminales adecuadas para medición de corriente en la escala de miliamperes. Además, se registró la temperatura ambiente \(T\). El arreglo es el mostrado en la Figura \ref{arreglo}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{arregloexp.png}
+    \caption{Esquema de conexión}
+    \label{arreglo}
+\end{figure}
+
+\noindent La relación teórica utilizada para el análisis fue la ecuación de Shockley para polarización directa
+
+\begin{equation}
+    I_d = I_s \left[
+    \exp\left(
+    \frac{e V_d}{n k_B T}
+    \right) - 1
+    \right]
+\end{equation}
+
+\noindent donde \(I_s\) es la corriente de saturación inversa, \(e\) es la carga del electrón, \(k_B\) es la constante de Boltzmann, \(T\) es la temperatura absoluta del diodo y \(n\) es el factor de idealidad. Para corrientes suficientemente grandes $I \gg I_s$ en polarización directa, se consideró la aproximación
+
+\begin{equation}
+    I_d \simeq I_s
+    \exp\left(
+    \frac{e V_d}{n k_B T}
+    \right)
+\end{equation}
+
+\noindent por lo que la linealización queda dada por
+
+\begin{equation}
+    \label{eqlineal}
+    \ln I_d =
+    \frac{e}{n k_B T} V_d + \ln I_s
+\end{equation}
+
+\noindent De esta forma, al ajustar linealmente \(\ln I_d\) como función de \(V_d\), la pendiente \(m\) permite estimar
+
+\begin{equation}
+    \frac{e}{k_B} = m n T
+\end{equation}
+
+\subsection{Procedimiento}
+
+\noindent Primero se conectó el módulo M05 a la consola LEB01 y se verificó que las conexiones coincidieran con el esquema del circuito de polarización del diodo. Posteriormente, se conectaron las terminales de la fuente de voltaje variable positiva a la entrada del módulo mediante cables banana, cuidando que la polaridad fuera correcta.\\
+
+\noindent Después se conectó un multímetro en modo voltímetro de corriente directa para medir la diferencia de potencial \(V_d\) entre las terminales del diodo. El segundo multímetro se configuró para medir corriente directa en la escala de miliamperes y se conectó a las terminales correspondientes del módulo M05 para registrar la corriente \(I_d\).\\
+
+\noindent Una vez verificado el montaje, el interruptor del módulo M05 se colocó en la posición de polarización directa y se encendió la consola. Se varió el voltaje de entrada \(V_i\) desde \(0\,\mathrm{V}\) hasta \(15\,\mathrm{V}\) en pasos de $0.5V$. Para cada valor aplicado de \(V_i\), se registraron simultáneamente el voltaje en el diodo \(V_d\) y la corriente \(I_d\).\\
+
+\noindent Posteriormente, se repitió el procedimiento colocando el interruptor del módulo en la posición de polarización inversa. En esta configuración se midieron nuevamente los valores de \(V_d\) e \(I_d\) para distintos valores del voltaje aplicado. Debido a que la corriente inversa esperada es pequeña, se cuidó que la escala del instrumento fuera adecuada para registrar variaciones pequeñas de corriente.\\
+
+\noindent Durante el experimento, se midió la temperatura ambiente del laboratorio con el termómetro.
+
+\section{Resultados}
+
+\noindent Con los valores medidos se construyó la gráfica de la corriente del diodo \(I_d\) como función del voltaje \(V_d\), incluyendo los datos de polarización directa e inversa. Para estimar la relación \(e/k_B\), se utilizaron únicamente los datos de polarización directa en el intervalo donde la corriente crece exponencialmente con el voltaje.
+
+\noindent A partir de esos datos se calculó \(\ln I_d\) y se realizó un ajuste lineal de la forma
+\begin{equation}
+    \ln I_d = m V_d + b
+    \label{ajustependiente}
+\end{equation}
+\noindent donde \(m\) corresponde a la pendiente del ajuste y \(b\) a la ordenada al origen. Usando la temperatura absoluta registrada durante el experimento, se obtuvo la estimación experimental de la relación \(e/k_B\) mediante
+\begin{equation}
+    \frac{e}{k_B} = m n T
+\end{equation}
+\noindent El valor $n$ se eligió de acuerdo con el régimen de operación del diodo, que en este caso se consideró recombinación dominante, \(n \approx 2\).\\
+
+\noindent Para el ajuste lineal \ref{ajustependiente} con $T=297.15 K$; se obtuvieron los siguientes resultados
+
+\begin{table}[H]
+\centering
+\caption{Parámetros obtenidos del ajuste lineal de \(\ln I_d\) contra \(V_d\).}
+\begin{tabular}{cc}
+\hline
+Magnitud & Valor \\
+\hline
+\(m\) & \((21.1 \pm 0.1)\,\mathrm{V^{-1}}\) \\
+\(b\) & \(-19.37 \pm 0.07\) \\
+\(R^2\) & \(0.998\) \\
+\(e/k_B\) & \((1.253 \pm 0.006)\times10^4\,\mathrm{K/V}\) \\
+\(E\%\) & \(7.96\%\) \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{pd_limpio.png}
+    \caption{Corriente sobre diodo en polarización directa, variando el voltaje de $0V$ a $15V$ en pasos de $0.5V$, a una temperatura de $24^\circ C$.}
+    \label{pdlimpio}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{pi_limpio.png}
+    \caption{Corriente sobre diodo en polarizacion inversa, variando el voltaje de $0 V$ a $15V$ en pasos de $0.5 V$, a una temperatura de $24^\circ C$.}
+    \label{pilimpio}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{pd_ajuste.png}
+    \caption{Ajuste de la linealización para los datos obtenidos de la Figura \ref{pdlimpio}.}
+    \label{pdajuste}
+\end{figure}
+
+\section{Discusión}
+\noindent Los resultados obtenidos muestran que la corriente del diodo en polarización directa sigue el comportamiento exponencial predicho por la ecuación de Shockley, como lo confirma el elevado coeficiente de determinación $R^2=0.998$ del ajuste lineal. Esto indica que la linealización de los datos mediante la representación de $\ln I_d$ en función de $V_d$ fue adecuada dentro del intervalo seleccionado.\\
+
+\noindent El valor experimental de la relación ($e/k_B=(1.253\pm0.006)\times10^4\ \mathrm{K/V}$) presentó un error relativo del $7.96 \%$ respecto al valor aceptado. Esta diferencia puede atribuirse a diversas fuentes de incertidumbre, entre ellas la resolución de los multímetros, la variación de la temperatura del diodo durante la medición, la aproximación de considerar constante el factor de idealidad ($n\approx2$) y las simplificaciones realizadas al despreciar la corriente de saturación inversa en la región exponencial. Asimismo, pequeñas variaciones en la selección del intervalo utilizado para el ajuste lineal pueden modificar ligeramente la pendiente obtenida y, en consecuencia, el valor calculado de $e/k_B$.\\
+
+\noindent En polarización inversa se observó que la corriente permaneció muy pequeña dentro del rango de voltajes aplicado, comportamiento consistente con la teoría para un diodo operando por debajo de su voltaje de ruptura. Esto confirma el correcto funcionamiento del dispositivo y la adecuada configuración del montaje experimental.\\
+
+\section{Conclusiones}
+\noindent Se determinó experimentalmente la relación entre la carga del electrón y la constante de Boltzmann mediante el análisis de la característica corriente-voltaje de un diodo semiconductor, obteniendo un valor de $e/k_B=(1.253\pm0.006)\times10^4\ \mathrm{K/V}$.\\
+
+\noindent El ajuste lineal de la ecuación de Shockley presentó un coeficiente de determinación de $R^2=0.998$, lo que demuestra que el comportamiento del diodo en polarización directa se describe adecuadamente mediante el modelo exponencial considerado.\\
+
+\noindent Aunque el resultado experimental difirió del valor teórico en un $7.96 \%$, el error se encuentra dentro de un margen razonable para este tipo de prácticas de laboratorio y puede explicarse por las incertidumbres instrumentales, las aproximaciones del modelo y las condiciones experimentales.\\
+
+\noindent Finalmente, la práctica permitió comprobar experimentalmente la relación entre fenómenos eléctricos y constantes fundamentales de la física, además de reforzar el uso de técnicas de adquisición de datos, linealización, ajuste por mínimos cuadrados y análisis de incertidumbres.\\
+\begin{thebibliography}{99}
+
+\end{thebibliography}	
+\end{multicols} %XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+\pagebreak
+
+\end{document}
+
+
+%https://github.com/jorge-rra2/Inter-Contemporanea-II
+
+    

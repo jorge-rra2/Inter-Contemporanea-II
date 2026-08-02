@@ -1,50 +1,7 @@
 
 
-Los valores medidos de corriente se convirtieron a amperes y los voltajes se mantuvieron en volts. Primero se graficó $I_a$ como función de $V_a$ para observar la curva característica del diodo. Después se construyó la variable $V_a^{3/2}$ y se realizó un ajuste lineal de $I_a$ contra $V_a^{3/2}$ en el intervalo donde los datos presentaron el comportamiento esperado por la ley de Child--Langmuir.
 
-El ajuste se hizo usando la forma
-
-\begin{equation}
-I_a = C V_a^{3/2}
-\end{equation}
-
-donde $C$ es la pendiente experimental. Con esta pendiente y con los parámetros geométricos del bulbo 1V2 reportados en la Tabla \ref{tab:parametros_1v2}, se calculó la relación carga-masa del electrón mediante
-
-\begin{equation}
-\frac{e}{m_e}
-=
-\frac{1}{2}
-\left(
-\frac{9r_a\beta^2 C}{8\pi\varepsilon_0 L}
-\right)^2
-\end{equation}
-
-Como verificación adicional del régimen de Child--Langmuir, se puede ajustar la relación de potencia
-
-\begin{equation}
-I_a = A V_a^p
-\end{equation}
-
-mediante la forma linealizada
-
-\begin{equation}
-\ln I_a = p\ln V_a + \ln A
-\end{equation}
-
-En el régimen limitado por carga espacial, el exponente obtenido debe ser cercano a $p=3/2$.
-
-\begin{center}
-    \includegraphics[width=0.92\columnwidth]{figuras/bulbo_datos.jpg}
-    \captionof{figure}{Corriente sobre el ánodo al variar su voltaje desde $0-20V$ y $20-40$ en pasos de $0.5V$ y en pasos de $1V$, respectivamente.}
-    \label{bulbolimpio}
-\end{center}
-
-\begin{center}
-    \includegraphics[width=0.92\columnwidth]{figuras/bulbo_ajuste.jpg}
-    \captionof{figure}{Ajuste lineal en el origen de los datos de la Figura \ref{bulbolimpio}.}
-    \label{bulboajuste}
-\end{center}
-
+Usando la ecuacion \ref{eq:ajuste}, se realizo un ajuste lineal de $I_a$ contra $V_a^{3/2}$ con los datos obtenidos (Figura \ref{bulboajuste}), de modo que $C$ es la pendiente experimental. Con esta pendiente y con los parámetros geométricos del bulbo 1V2 reportados en la Tabla \ref{tab:parametros_1v2}, se calculó la relación carga-masa del electrón mediante la ecuacion \ref{eq:em_despejado}.\\
 
 Para el ajuste en el origen de la forma $I=mx$ donde $I$ sera la corriente, $x = V^{3/2}$ se obtiene 
 
@@ -63,14 +20,27 @@ Magnitud & Valor \\
 \end{tabular}
 \end{table}
 
-\begin{center}
-    \includegraphics[width=0.92\columnwidth]{figuras/bulbo_sobre_ajuste.png}
-    \captionof{figure}{Ajuste en potencia de los datos de la Figura \ref{bulbolimpio}.}
-    \label{bulboajuste_limpio}
-\end{center}
+\begin{figure*}
+    \centering
+    \includegraphics[width=0.7\linewidth]{figuras/lineal_v32.png}
+    \captionof{figure}{Ajuste lineal de la corriente de ánodo $I_a$ en función de 
+$V_a^{3/2}$. Para el ajuste solo se considero el regimen $V^{3/2}<100 $.}
+    \label{bulboajuste}
+\end{figure*}
 
+Como verificación adicional del régimen de Child--Langmuir, se puede ajustar la relación de potencia
 
-Para el ajuste linealizado $\ln I = p \ln V + \ln m$ se obtiene 
+\begin{equation}
+I_a = A (V_a)^p
+\end{equation}
+
+mediante la forma linealizada
+
+\begin{equation}
+\log I_a = p\log V_a + \log A
+\end{equation}
+
+En el régimen limitado por carga espacial, el exponente obtenido debe ser cercano a $p=3/2$. Para el ajuste linealizado $\log I = p \log V + \log A$ se obtiene la grafica \ref{bulbolineal} y los valores de la tabla \ref{tab_lineal}
 
 \begin{table}[h]
 \centering
@@ -80,15 +50,18 @@ Para el ajuste linealizado $\ln I = p \ln V + \ln m$ se obtiene
 Magnitud & Valor \\
 \hline
 \(p\) & \(1.243 \pm 0.013\) \\
-$m$ & \((2.57 \pm  0.09)\times 10^{-5}\,A/V^p\)\\
+$A$ & \((2.57 \pm  0.09)\times 10^{-5}\,A/V^p\)\\
 \(R^2\) & \(0.993\) \\
 \(E\%\) & \(-17.1\%\) \\
 \hline
 \end{tabular}
+\label{tab_lineal}
 \end{table}
 
-\begin{center}
-    \includegraphics[width=0.92\columnwidth]{figuras/tresmedios.jpg}
-    \captionof{figure}{Ajuste linealizado de los datos de la Figura \ref{bulbolimpio}.}
+\begin{figure*}
+    \centering
+    \includegraphics[width=0.7\linewidth]{figuras/grafica_potencia.png}
+    \captionof{figure}{Ajuste lineal de $\log_{10}I_a$ en función de 
+$\log_{10}V_a$. Para el ajuste solo se considero el regimen $\log V>0.5 $}
     \label{bulbolineal}
-\end{center}
+\end{figure*}

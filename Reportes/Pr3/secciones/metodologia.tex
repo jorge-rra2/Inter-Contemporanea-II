@@ -1,14 +1,10 @@
 
 
-La práctica tuvo como objetivo determinar experimentalmente la relación entre la constante de Planck y la carga elemental, $h/e$, a partir del efecto fotoeléctrico observado en diodos emisores de luz, LED, de distintas longitudes de onda. Para ello se midió el voltaje ánodo-cátodo, $V_{A-K}$, asociado al encendido de cada LED cuando la corriente que circulaba por él alcanzaba un valor de umbral del orden de algunos microamperes.
+La práctica tuvo como objetivo determinar experimentalmente la relación entre la constante de Planck y la carga elemental, $h/e$, a partir del efecto fotoeléctrico observado en diodos emisores de luz, LED, de distintas longitudes de onda. Para ello se midió el voltaje ánodo-cátodo, $V_{A-K}$, asociado al encendido de cada LED cuando la corriente que circulaba por él alcanzaba un valor de umbral del orden de algunos microamperes.\\
 
-\subsection{Materiales}
+Se conecto la fuente de voltaje variable de corriente directa en serie con una resistencia de $8.2\,\mathrm{k\Omega}$, un microamperímetro y el LED bajo estudio. El voltímetro se conectó en paralelo con el LED. Se estudiaron 8 LEDs de distinto color: Infrarojo, Rojo, Naranja, Amarillo, Verde, Azul, Violeta y Ultravioleta, los ocho LEDs estuvieron en una sola tablilla dentro de una camara oscura, dentro de la camra oscura, frente al LED estudiado, se coloco tambien un detector CCD lineal Thorlabs LC1-USB con rango espectral de $400$-$1000$nm.\\
 
-El montaje experimental consistió en una fuente de alimentación regulada de corriente directa, variable entre $0$ y $10\,\mathrm{V}$, un conjunto de ocho LEDs de diferentes longitudes de onda, una resistencia de $8.2\,\mathrm{k\Omega}$ conectada en serie con cada LED, dos multímetros digitales, cables tipo caimán y una tablilla de conexiones. Uno de los multímetros se utilizó como microamperímetro para medir la corriente $I_{A-K}$ que circulaba por el LED, mientras que el segundo se empleó como voltímetro para medir la diferencia de potencial ánodo-cátodo, $V_{A-K}$.
-
-\subsection{Diseño experimental}
-
-El circuito empleado consistió en una fuente de voltaje de corriente directa conectada en serie con una resistencia limitadora de corriente, un microamperímetro y el LED bajo estudio. El voltímetro se conectó en paralelo con el LED, de forma que permitiera medir directamente la diferencia de potencial entre el ánodo y el cátodo. La resistencia de $8.2\,\mathrm{k\Omega}$ se utilizó para limitar la corriente en el circuito y evitar daños en los LEDs durante el incremento gradual del voltaje aplicado.
+Despues de realizar el montaje, se aumento el voltaje de la fuente hasta observar un aumento de la intensidad de la luz detectada por la CCD, en este caso, se registraron simultáneamente la corriente $I_{A-K}$ y el voltaje ánodo-cátodo $V_{A-K}$. Este procedimiento se repitió para cada uno de los ocho LEDs disponibles.\\
 
 Cada LED emitía luz con una longitud de onda característica $\lambda$. A partir de dicha longitud de onda se calculó la frecuencia correspondiente mediante
 
@@ -28,15 +24,7 @@ De esta expresión se obtiene
     \nu = \frac{e}{h} V_{A-K}
 \end{equation}
 
-por lo que la pendiente de la gráfica de $\nu$ en función de $V_{A-K}$ corresponde a $e/h$. En consecuencia, el inverso de dicha pendiente proporciona una estimación experimental de la razón $h/e$.
-
-\subsection{Procedimiento experimental}
-
-Antes de iniciar las mediciones se verificó que la fuente de alimentación estuviera ajustada a $0\,\mathrm{V}$. Posteriormente, se conectó la terminal de tierra del equipo a la fuente de alimentación y se armó el circuito correspondiente al primer LED. La salida positiva de la fuente se conectó al microamperímetro, de manera que este permitiera registrar la corriente $I_{A-K}$ que circulaba por el LED. La terminal común del microamperímetro se conectó al LED, mientras que el voltímetro se colocó en paralelo con este para medir el voltaje $V_{A-K}$.
-
-Una vez revisadas las conexiones, se aumentó lentamente el voltaje suministrado por la fuente. Durante este proceso se observó la corriente indicada por el microamperímetro hasta que esta alcanzó un valor dentro del intervalo de $5$ a $15\,\mu\mathrm{A}$. Al llegar a dicho intervalo, se registraron simultáneamente la corriente $I_{A-K}$ y el voltaje ánodo-cátodo $V_{A-K}$. Este procedimiento se repitió para cada uno de los ocho LEDs disponibles, procurando mantener el mismo criterio de corriente de umbral para todas las mediciones.
-
-Para cada LED se asoció el voltaje medido $V_{A-K}$ con la frecuencia $\nu$ calculada a partir de su longitud de onda nominal. Con el conjunto de datos obtenidos se construyó una gráfica de $\nu$ en función de $V_{A-K}$ y se realizó un ajuste lineal de la forma
+por lo que la pendiente de la gráfica de $\nu$ en función de $V_{A-K}$ corresponde a $e/h$. En consecuencia, el inverso de dicha pendiente proporciona una estimación experimental de la razón $h/e$.Con el conjunto de datos obtenidos se construyó una gráfica de $\nu$ en función de $V_{A-K}$ y se realizó un ajuste lineal de la forma
 
 \begin{equation}
     \nu = m V_{A-K} + b
@@ -47,3 +35,73 @@ donde $m$ es la pendiente de la recta y $b$ la ordenada al origen. Idealmente, d
 \begin{equation}
     \frac{h}{e} = \frac{1}{m}
 \end{equation}
+
+
+Se estudió el espectro de emisión de ocho diodos emisores de luz
+(LED): infrarrojo, rojo, naranja, amarillo, verde, azul, violeta y
+ultravioleta. Cada LED se encendió individualmente y se colocó frente a
+la entrada de un espectrómetro óptico. Para cada fuente se
+registró la intensidad luminosa en función de la longitud de onda en nano-metros.\\
+
+La longitud de onda del LED, denotada por $\lambda_{\max}$, se tomó como
+la longitud de onda correspondiente al dato experimental con la mayor
+intensidad. Para estimar el ancho espectral se empleó el ancho completo a media
+altura. Considerando que la intensidad de fondo podía aproximarse
+como cero, el nivel de media altura se definió como
+
+\begin{equation}
+    I_{1/2}=\frac{I_{\max}}{2}.
+\end{equation}
+
+Se determinaron las longitudes de onda $\lambda_L$ y $\lambda_R$ para
+las cuales la intensidad alcanzó la mitad del máximo, a la izquierda y
+a la derecha del pico, respectivamente. Debido a que el valor
+$I_{\max}/2$ no necesariamente coincidió exactamente con uno de los
+puntos experimentales, las posiciones de los cruces se calcularon
+mediante interpolación lineal entre los dos puntos consecutivos que
+encerraban dicho nivel. Para dos puntos $(\lambda_i,I_i)$ y
+$(\lambda_{i+1},I_{i+1})$, la longitud de onda correspondiente a la
+media altura se calculó mediante
+
+\begin{equation}
+    \lambda_{1/2}
+    =
+    \lambda_i+
+    \frac{I_{\max}/2-I_i}
+         {I_{i+1}-I_i}
+    \left(\lambda_{i+1}-\lambda_i\right).
+\end{equation}
+
+Una vez obtenidos ambos cruces, el ancho completo a media altura se
+calculó como
+
+\begin{equation}
+    \mathrm{FWHM}=\lambda_R-\lambda_L.
+\end{equation}
+
+De acuerdo con el criterio adoptado para este experimento, la
+incertidumbre asociada con la longitud de onda del LED se tomó como el
+semi-ancho a media altura:
+
+\begin{equation}
+    \Delta\lambda
+    =
+    \frac{\mathrm{FWHM}}{2}
+    =
+    \frac{\lambda_R-\lambda_L}{2}.
+\end{equation}
+
+Finalmente, las longitudes de onda se reportaron en la forma
+
+\begin{equation}
+    \lambda_{\mathrm{LED}}
+    =
+    \lambda_{\max}\pm\Delta\lambda.
+\end{equation}
+
+Debe señalarse que esta cantidad representa principalmente la anchura
+espectral de la emisión del LED y se utilizó como una estimación
+operacional de la incertidumbre de la longitud de onda, de acuerdo con
+el criterio establecido para la práctica.
+
+```

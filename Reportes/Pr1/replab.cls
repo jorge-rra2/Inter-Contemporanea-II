@@ -38,6 +38,7 @@
 %pa arreglar el desmadre de las figuras
 \RequirePackage{placeins}
 \RequirePackage{caption}
+\RequirePackage{authblk}
 
 % Bibliografía
 \RequirePackage[backend=biber]{biblatex}
@@ -149,9 +150,9 @@
     
         \begin{center}%
     		\begin{tblr}{colspec={Q[c, b, wd=.15\textwidth] Q[c, b, wd=.6\textwidth] Q[c, b, wd=.15\textwidth]}}
-    			\includegraphics[width=.15\textwidth]{unam}
+    			\includegraphics[width=.12\textwidth]{unam}
     			& {\bfseries\large\textcolor{principaluno}{\@title} \\ \LARGE\the\subtitle}
-    			& \includegraphics[width=.15\textwidth]{fcunam}
+    			& \includegraphics[width=.2\textwidth]{fcunam}
     		\end{tblr}
     		
     		\medskip
@@ -185,8 +186,11 @@
     
     		\medskip
     		
-    		Facultad de Ciencias\\
-    		Universidad Nacional Autónoma de México
+			
+Instituto de Ciencias Físicas, Universidad Nacional Autónoma de México,\\
+Cuernavaca, Morelos, México
+
+    		
     
         \end{center}
     
@@ -220,10 +224,7 @@
 			colspec = {Q[c,m] Q[l,m]},
 			colsep = 2pt
 		}
-    		\includegraphics[
-				align=c,
-				width=3ex]{fcunam}% Escudo de la instittución
-    		& {\small{Facultad de Ciencias UNAM}}
+    		 {\small{Instituo de Ciencias Fisicas}}
     	\end{tblr}
     }
     \fancyhead[re]{%
@@ -232,7 +233,7 @@
     
     \fancyhead[co]{%
         \begin{tblr}{c c c}
-            \phantom{\includegraphics[width=3ex]{fcunam}} & \small\textit{\the\subtitle} & \phantom{\includegraphics[width=3ex]{fcunam}}
+            \phantom{\includegraphics[width=4ex]{fcunam}} & \small\textit{\the\subtitle} & \phantom{\includegraphics[width=4ex]{fcunam}}
         \end{tblr}
     }
     
