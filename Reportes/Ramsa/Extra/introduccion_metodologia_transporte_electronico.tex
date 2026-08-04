@@ -1,0 +1,86 @@
+% Paquetes requeridos en el preámbulo:
+% \usepackage{amsmath}
+% \usepackage{graphicx}
+% \usepackage{siunitx}
+% \DeclareSIUnit{\torr}{Torr}
+% \DeclareSIUnit{\townsend}{Td}
+
+\section{Introducción}
+\label{sec:introduccion}
+
+El transporte de electrones en gases está determinado por la interacción entre las partículas cargadas, el campo eléctrico aplicado y las especies neutras del medio. Las colisiones elásticas e inelásticas modifican la energía y la dirección de los electrones y, en conjunto, dan origen a magnitudes macroscópicas como la movilidad, la velocidad de deriva, los coeficientes de difusión y las tasas de ionización. El conocimiento de estos parámetros es necesario para caracterizar descargas gaseosas y evaluar modelos cinéticos de plasmas fuera del equilibrio \cite{GonzalezMagana2024,Jovanovic2009}.
+
+En los gases nobles, la probabilidad de dispersión de electrones de baja energía no presenta un comportamiento monótono. El efecto Ramsauer--Townsend consiste en la aparición de un mínimo en la sección eficaz de dispersión para un intervalo particular de energía electrónica, de modo que el gas se vuelve relativamente transparente al paso de los electrones \cite{Ramsauer1921}. Este fenómeno puede observarse en un tiratrón de xenón 2D21 mediante la medición de las corrientes de rejilla y ánodo mientras se modifica la energía de los electrones emitidos por el cátodo \cite{Kukolich1968}. En la primera parte del trabajo se utilizó este dispositivo para estudiar la respuesta eléctrica asociada al mínimo Ramsauer--Townsend y comparar la adquisición manual con un sistema automatizado.
+
+Una descripción complementaria del transporte se obtiene mediante los experimentos de enjambres, en los que un conjunto de electrones atraviesa un gas bajo la acción de un campo aproximadamente uniforme. Sus coeficientes de transporte dependen principalmente del campo eléctrico reducido $E/N$, donde $E$ es la magnitud del campo y $N$ la densidad numérica del gas \cite{GonzalezMagana2019}. En la técnica de Townsend pulsada, un pulso ultravioleta libera electrones desde el cátodo y el movimiento posterior de electrones e iones produce una corriente transitoria. Debido a la diferencia entre sus movilidades, la componente electrónica puede separarse temporalmente y utilizarse para determinar la velocidad de deriva \cite{Jovanovic2009}.
+
+Las mezclas de argón y nitrógeno son particularmente sensibles a la competencia entre la dispersión elástica del Ar, relacionada con el mínimo Ramsauer--Townsend, y los canales de excitación del $\mathrm{N_2}$. Para concentraciones pequeñas de nitrógeno, esta interacción puede producir conductividad diferencial negativa, es decir, una disminución de la velocidad de deriva al aumentar $E/N$ dentro de cierto intervalo \cite{Jovanovic2009}. Por ello, en la segunda parte se midió la corriente electrónica transitoria en una mezcla de \SI{1}{\percent} de $\mathrm{N_2}$ y \SI{99}{\percent} de Ar, y se obtuvo la velocidad de deriva en función de $E/N$. En conjunto, ambas experiencias permitieron examinar cómo las colisiones electrón--átomo se manifiestan tanto en las corrientes de un tubo gaseoso como en el transporte colectivo de un enjambre electrónico.
+
+\section{Metodología}
+\label{sec:metodologia}
+
+% Inserte antes de esta subsección la metodología correspondiente al tiratrón 2D21.
+\subsection{Experimento de Townsend pulsado}
+\label{subsec:townsend-pulsado}
+
+\subsubsection{Materiales}
+\label{subsubsec:materiales-townsend}
+
+Se empleó una cámara de Townsend con electrodos planos y paralelos separados por una distancia de $d=\SI{3.0}{\centi\metre}$; un sistema de vacío compuesto por una bomba mecánica y una bomba turbomolecular; un medidor Pirani/ion para el régimen de alto vacío y un Baratron para la presión de trabajo; una mezcla gaseosa de \SI{1}{\percent} de $\mathrm{N_2}$ y \SI{99}{\percent} de Ar; una fuente de alto voltaje; un láser ultravioleta pulsado EKSPLA NT~342B operado a $\lambda=\SI{355}{\nano\metre}$; un polarizador, un fotodiodo, un amplificador corriente--voltaje, un osciloscopio Tektronix TDS~320 y el sistema de adquisición desarrollado en el laboratorio.
+
+\subsubsection{Diseño experimental}
+\label{subsubsec:diseno-townsend}
+
+El montaje se dispuso como se muestra en la Fig.~\ref{fig:camara-townsend}. La fuente de alto voltaje estableció un campo eléctrico aproximadamente uniforme entre el ánodo y el cátodo. El haz ultravioleta atravesó una abertura en el ánodo e incidió sobre el cátodo, donde liberó un pulso inicial de electrones. Un fotodiodo proporcionó la referencia temporal de cada disparo, mientras que la corriente inducida por el movimiento de las cargas se condujo a un amplificador corriente--voltaje y posteriormente al osciloscopio. La presión de la cámara y las condiciones de adquisición se supervisaron desde el sistema de control.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\columnwidth]{chamber.png}
+    \caption{Esquema del aparato de Townsend pulsado utilizado para medir la corriente electrónica transitoria en la mezcla de $\mathrm{N_2}$--Ar.}
+    \label{fig:camara-townsend}
+\end{figure}
+
+\subsubsection{Procedimiento}
+\label{subsubsec:procedimiento-townsend}
+
+\begin{enumerate}
+    \item Se verificó que la fuente de alto voltaje se encontrara desactivada y que las válvulas, los medidores de presión y las conexiones eléctricas estuvieran en condiciones de operación.
+
+    \item Se encendió la bomba mecánica para realizar la evacuación inicial. Posteriormente se puso en funcionamiento la bomba turbomolecular hasta alcanzar una presión base aproximada de $\SI{2.5e-6}{\torr}$, con el fin de retirar el aire y los gases residuales de la cámara.
+
+    \item Se introdujo la mezcla de \SI{1}{\percent} de $\mathrm{N_2}$ y \SI{99}{\percent} de Ar y se reguló su admisión hasta establecer la presión de trabajo. Las mediciones se efectuaron para presiones comprendidas aproximadamente entre $\SI{10.1}{\torr}$ y $\SI{200}{\torr}$; la temperatura se registró en cada serie.
+
+    \item Para una presión dada se seleccionó en el software el valor deseado del campo reducido $E/N$. A partir de la presión, la temperatura y la separación entre electrodos, el programa determinó el voltaje requerido y éste se aplicó entre el ánodo y el cátodo. El intervalo experimental cubrió aproximadamente
+    \begin{equation}
+        \SI{1}{\townsend} \leq \frac{E}{N} \leq \SI{60}{\townsend}.
+    \end{equation}
+
+    \item Se ajustó la energía del pulso láser mediante el polarizador y el sistema de control, de manera que la señal electrónica fuera observable sin saturar la cadena de medición ni producir descargas sostenidas.
+
+    \item Se disparó el láser sobre el cátodo. En el osciloscopio se registraron simultáneamente la referencia proporcionada por el fotodiodo y la señal del amplificador, proporcional a la corriente transitoria generada en la cámara.
+
+    \item Se ajustaron las escalas temporal y vertical del osciloscopio para distinguir la componente electrónica. Mediante los cursores se midió el tiempo de tránsito $t_{\mathrm e}$ entre el pulso de referencia y la caída asociada con la llegada del enjambre al ánodo.
+
+    \item El procedimiento se repitió para los valores programados de $E/N$ y para las distintas presiones de trabajo. La intensidad del láser y las escalas del osciloscopio se modificaron cuando fue necesario para conservar una señal medible.
+\end{enumerate}
+
+\subsubsection{Tratamiento de datos}
+\label{subsubsec:tratamiento-townsend}
+
+La densidad numérica del gas se obtuvo mediante la ecuación de estado ideal,
+\begin{equation}
+    N=\frac{p}{k_{\mathrm B}T},
+\end{equation}
+y el campo entre los electrodos se aproximó por $E=V/d$. Por tanto, el voltaje correspondiente a un campo reducido seleccionado estuvo dado por
+\begin{equation}
+    V=\left(\frac{E}{N}\right)\frac{p\,d}{k_{\mathrm B}T},
+    \label{eq:voltaje_EN}
+\end{equation}
+cuando todas las cantidades se expresaron en unidades del Sistema Internacional.
+
+La velocidad de deriva se calculó a partir del tiempo de tránsito medido en el osciloscopio:
+\begin{equation}
+    v_{\mathrm d}=\frac{d}{t_{\mathrm e}}.
+    \label{eq:velocidad_deriva}
+\end{equation}
+Cuando se obtuvieron registros repetidos bajo las mismas condiciones, se promedió el tiempo de tránsito antes de aplicar la Ec.~\eqref{eq:velocidad_deriva}. Finalmente, los valores de $v_{\mathrm d}$ se agruparon de acuerdo con la presión de trabajo y se representaron en función de $E/N$ utilizando una escala logarítmica en el eje horizontal.

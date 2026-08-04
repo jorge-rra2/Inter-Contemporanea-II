@@ -45,6 +45,8 @@
 \RequirePackage[style=mexican]{csquotes}
 
 % --- Configuraciones adicionales de paquetes ---
+\DeclareSIUnit{\torr}{Torr}
+\DeclareSIUnit{\townsend}{Td}
 
 % Versión de PGFplots
 \pgfplotsset{compat=newest}
